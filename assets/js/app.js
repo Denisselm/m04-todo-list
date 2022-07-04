@@ -4,6 +4,18 @@ let input = document.querySelector('.input')
 let boton = document.querySelector('.boton-agregar')
 let container = document.querySelector('.container')
 
+//eventos para click y enter
+
+botonAgregar.addEventListener("click", () => {
+    chequearInput();
+})
+
+inputPricipal.addEventListener("keypress", (e) => {
+    if (e.key === 'Enter') {
+        chequearInput();
+    }
+})
+
 //crear clase item que contendra en su constructor un metodo llamado crear div
 class item {
     constructor(inputPricipal) {
