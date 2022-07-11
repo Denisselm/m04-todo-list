@@ -51,3 +51,23 @@ botonEditar.classList.add("boton-editar");
 let botonRemover = document.createElement("button");
 botonRemover.innerHTML = "<i class='fas fa-trash'></i>";
 botonRemover.classList.add("boton-remover");
+
+//Agregar elementos al DIV
+nuevoDiv.appendChild(inputItem);
+nuevoDiv.appendChild(botonEditar);
+nuevoDiv.appendChild(botonRemover);
+
+//Agregar DIV al container
+contenedor.appendChild(nuevoDiv);
+
+botonEditar.addEventListener("click", () => {
+    if (inputItem.disabled == false) {
+        inputItem.setAttribute("disabled", true);
+        botonEditar.style.color = "#62d0ff";
+        botonEditar.innerHTML = "<i class='fas fa-lock'></i>";
+    } else {
+        inputItem.removeAttribute("disabled");
+        botonEditar.innerHTML = "<i class='fas fa-lock-open'></i>";
+        botonEditar.style.color = "rgb(255, 6, 46)";
+    }
+});
