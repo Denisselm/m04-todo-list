@@ -3,6 +3,7 @@
 let input = document.querySelector('.input')
 let boton = document.querySelector('.boton-agregar')
 let container = document.querySelector('.container')
+let aviso = document.querySelector(".aviso");
 
 //eventos para click y enter
 
@@ -38,3 +39,15 @@ crearDiv(tarea) {
 
 
 }
+
+//crear botones
+
+//Crear boton editar
+let botonEditar = document.createElement("button");
+botonEditar.innerHTML = "<i class='fas fa-lock'></i>";
+botonEditar.classList.add("boton-editar");
+
+//Crear boton eliminar
+let botonRemover = document.createElement("button");
+botonRemover.innerHTML = "<i class='fas fa-trash'></i>";
+botonRemover.classList.add("boton-remover");
